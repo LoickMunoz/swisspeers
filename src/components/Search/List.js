@@ -1,16 +1,44 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+  Grid,
+  Card,
+  CardContent,
+  CardHeader,
+  CardActions,
+  Button,
+} from "@material-ui/core";
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  card: {
+    height: "100%",
+  },
+}));
 
 const List = ({ searchResults }) => {
+  const history = useHistory();
+  const classes = useStyles();
   return (
-    <div>
+    <Grid container direction="row" alignItems="stretch" spacing={3}>
       {searchResults.map((res) => (
-        <div>
-          <div key={res.objectID}>title: {res.title}</div>
-          <Link to={`/detail/${res.objectID}`}>go detail</Link>
-        </div>
+        <Grid key={res.objectID} item xs={12} md={6} xl={4}>
+          <Card className={classes.card}>
+            <CardHeader title={res.title} subheader={res.author}></CardHeader>
+            <CardContent>Comments : {res.num_comments}</CardContent>
+            <CardActions>
+              <Button
+                onClick={() => history.push(`/detail/${res.objectID}`)}
+                color="secondary"
+                variant="contained"
+              >
+                details
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 };
 

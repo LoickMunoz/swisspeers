@@ -10,7 +10,7 @@ import "./App.css";
 export default function App() {
   return (
     <Router>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Switch>
           <Route exact path="/">
             <Home />

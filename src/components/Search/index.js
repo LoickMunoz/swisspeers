@@ -14,9 +14,14 @@ import List from "./List";
 const useStyles = makeStyles(() => ({
   form: {
     margin: "20px 0px",
+    position: "sticky",
+    top: 0,
+    background: "white",
+    zIndex: 2,
+    //width: "100%",
   },
   loadMoreContainer: {
-    marginTop: "20px",
+    margin: "20px 0px",
   },
   loadMoreButton: {
     overflowAnchor: "none",

@@ -22,7 +22,7 @@ const List = ({ searchResults }) => {
   return (
     <Grid container direction="row" alignItems="stretch" spacing={3}>
       {searchResults.map((res) => (
-        <Grid key={res.objectID} item xs={12} md={6} xl={4}>
+        <Grid key={res.objectID} item xs={12} md={6} lg={4}>
           <Card className={classes.card}>
             <CardHeader title={res.title} subheader={res.author}></CardHeader>
             <CardContent>Comments : {res.num_comments}</CardContent>

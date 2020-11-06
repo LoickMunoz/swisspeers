@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
     top: 0,
     background: "white",
     zIndex: 2,
-    //width: "100%",
   },
   loadMoreContainer: {
     margin: "20px 0px",
@@ -49,7 +48,7 @@ const Search = () => {
           alignItems="center"
           spacing={1}
         >
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             <TextField
               label="Search"
               name="search"
@@ -60,7 +59,7 @@ const Search = () => {
               fullWidth
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} md={2}>
             <Button
               onClick={() => {
                 dispatch(doSearch(query));
@@ -72,7 +71,7 @@ const Search = () => {
               Search
             </Button>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6} md={2}>
             <Button
               onClick={() => {
                 setQuery("");

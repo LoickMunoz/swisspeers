@@ -67,6 +67,7 @@ const Search = () => {
               fullWidth
               variant="contained"
               color="primary"
+              role="search"
             >
               Search
             </Button>

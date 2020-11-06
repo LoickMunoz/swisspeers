@@ -13,7 +13,7 @@ export const searchSlice = createSlice({
   reducers: {
     add: (state, action) => {
       state.data = state.data.concat(action.payload);
-      //We mutate directly becaue it's using immer.js under the hood and return a new object
+      //We mutate directly because it's using immer.js under the hood and returns a new object
       state.cursor += action.payload.length;
     },
     search: (state, action) => {

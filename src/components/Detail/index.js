@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
 
 const Detail = () => {
   const history = useHistory();
-  let { id } = useParams();
+  const { id } = useParams();
   const article = useSelector((state) => selectArticle(state, id));
   const classes = useStyles();
   return (

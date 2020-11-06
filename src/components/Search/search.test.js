@@ -4,7 +4,7 @@ import axios from "axios";
 import { Provider } from "react-redux";
 
 import Search from ".";
-import store from "../../app/store";
+import store from "../../utils/store";
 
 jest.mock("axios");
 
